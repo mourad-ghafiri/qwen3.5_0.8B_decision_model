@@ -75,7 +75,70 @@ def data_stats() -> dict:
     return stats
 
 
-def render(repo_id: str, results: list[dict], log: list[dict], summary: dict, calib: dict, stats: dict) -> str:
+def pct(x) -> str:
+    return "–" if x is None else f"{100 * x:.0f}%"
+
+
+def compare_section(rep: dict, hardware: str) -> str:
+    """Head-to-head vs TypeSafe Jev, computed from scripts/compare_jev.py output (results/compare_jev.json)."""
+    m, h, qs = rep["meta"], rep["head_to_head"], rep["questions"]
+    j, o = rep["summary"]["jev"], rep["summary"]["ours"]
+    jt, ot = j["by_type"], o["by_type"]
+
+    def top(q, who):
+        d = q[who]["dist"]
+        return max(d[0], 1 - d[0]) if q["type"] == "noul" else max(d)
+
+    jev_certain = sum(top(q, "jev") >= 0.99 for q in qs) / len(qs)
+    ours_top = sum(top(q, "ours") for q in qs) / len(qs)
+    target_top = sum(max(q["target"]) for q in qs) / len(qs)
+    three = lambda t, key, f: " / ".join(f(t[k].get(key)) for k in ("choice", "noul", "score"))  # noqa: E731
+    acc3 = lambda t: three(t, "acc", lambda v: f"{100 * v:.1f}%")  # noqa: E731
+    ece3 = lambda t: three(t, "ece", lambda v: fmt(v))  # noqa: E731
+    gate = lambda t, tau: f"{pct(t['choice'].get(f'cov@{tau}'))} at {pct(t['choice'].get(f'acc@{tau}'))}"  # noqa: E731
+    ms = lambda v: f"{v / 1000:.1f} s"  # noqa: E731
+    where = f"locally on a {hardware}" if hardware else f"locally on `{m['our_device']}`"
+    return f"""## Head to head: TypeSafe Jev vs this model on unseen scenarios
+
+We sent the **same {m['scenarios_scored']} held-out scenarios ({m['questions_scored']} questions)** to both
+models, as identical `POST /v1/systemone` requests. None of these scenarios was used to train, select or
+calibrate this model.
+
+- **Jev:** `{m['jev_model_reported']}` through TypeSafe's hosted API.
+- **This model** (0.8B parameters): ran **{where}**, not on a GPU server.
+
+| | TypeSafe Jev (`{m['jev_model_reported']}`) | this model (0.8B{', ' + hardware if hardware else ''}) |
+|---|---|---|
+| **Accuracy** (top answer = label's top answer) | {100 * j['overall']['acc']:.1f}% | {100 * o['overall']['acc']:.1f}% |
+| Accuracy: Choice / Noul / Score | {acc3(jt)} | {acc3(ot)} |
+| Brier (lower is better) | {fmt(j['overall']['brier'])} | {fmt(o['overall']['brier'])} |
+| Log-loss vs the soft labels (lower is better)¹ | {fmt(j['overall']['logloss'])} | {fmt(o['overall']['logloss'])} |
+| Calibration error, ECE: Choice / Noul / Score¹ | {ece3(jt)} | {ece3(ot)} |
+| Choice answers with confidence ≥ 0.7: share automated, accuracy | {gate(jt, 0.7)} | {gate(ot, 0.7)} |
+| Choice answers with confidence ≥ 0.9: share automated, accuracy | {gate(jt, 0.9)} | {gate(ot, 0.9)} |
+| Latency per request, p50 / p95 | {ms(j['latency_p50_ms'])} / {ms(j['latency_p95_ms'])} (hosted API, incl. network) | {ms(o['latency_p50_ms'])} / {ms(o['latency_p95_ms'])} (local, no network) |
+| Cost for the whole test set | ${m['jev_estimated_cost_usd']:.3f} ({m['jev_input_tokens'] / 1000:.0f}k input tokens) | $0, offline, on your own machine |
+
+**What this means:**
+- **Head to head:** on questions where only one model was right, Jev was right {h['only_jev_correct']} times
+  and this model {h['only_ours_correct']}. The two models agree on {100 * h['agreement']:.1f}% of top answers.
+- **Jev is the stronger model** on accuracy, Brier and confidence-gated automation.
+- **This model is a small open alternative** that runs fully offline. On a GPU it answers in about 50 ms per
+  request (see the evaluation section below).
+- **This model is under-confident.** Its average top probability is {ours_top:.2f}, while the labels average
+  {target_top:.2f}, so it automates fewer decisions at high confidence thresholds.
+- **¹ Read log-loss and ECE with care.** The labels are soft probabilities written with this project's rubric,
+  and this model was trained on the same labelling style. Jev often answers with near-certainty
+  ({100 * jev_certain:.0f}% of its top probabilities are ≥ 0.99), which log-loss penalises whenever the labels
+  spread some probability to other options. Accuracy and Brier are the fairer comparison.
+
+The comparison script and a guide to reproduce it with your own TypeSafe API key are in the project repository
+(`scripts/compare_jev.py`, `docs/compare_jev.md`).
+"""
+
+
+def render(repo_id: str, results: list[dict], log: list[dict], summary: dict, calib: dict, stats: dict,
+           compare: dict | None = None, hardware: str = "") -> str:
     total_q = sum(stats["types"].values()) or 1
     mix = ", ".join(f"{k} {100 * v / total_q:.0f}%" for k, v in stats["types"].most_common())
     diff = ", ".join(f"{k} {100 * v / total_q:.0f}%" for k, v in stats["difficulty"].most_common())
@@ -111,6 +174,7 @@ The interface follows the publicly documented request/response shape of TypeSafe
 ([docs](https://docs.typesafe.ai/api.md)). This is an independent open model. **It is not affiliated with or
 endorsed by TypeSafe, and it is not Jev.**
 
+{compare_section(compare, hardware) if compare else ""}
 ## How it works
 
 - **Logit readout.** Each question is rendered after the state and ends in `Answer:`. The probabilities are a
@@ -202,18 +266,29 @@ soft targets. ECE uses 10 bins over the top-option probability (P(yes) for Noul)
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model-dir", required=True)
-    ap.add_argument("--run-dir", required=True)
+    ap.add_argument("--model-dir", required=True, help="folder with calibration.json (the card is written here by default)")
     ap.add_argument("--repo-id", required=True)
+    ap.add_argument("--run-dir", help="training run folder with log.jsonl and summary.json")
+    ap.add_argument("--log", help="training log (default: <run-dir>/log.jsonl)")
+    ap.add_argument("--summary", help="training summary (default: <run-dir>/summary.json)")
+    ap.add_argument("--eval", default=str(ROOT / "reports/eval.json"), help="evaluate.py output")
+    ap.add_argument("--compare", help="compare_jev.py output (adds the Jev head-to-head section)")
+    ap.add_argument("--hardware", default="", help='where this model ran for the comparison, e.g. "MacBook Pro (Apple M2 Max)"')
+    ap.add_argument("--out", help="output path (default: <model-dir>/README.md)")
     args = ap.parse_args()
-    results = json.loads((ROOT / "reports/eval.json").read_text())
-    log = load_jsonl(Path(args.run_dir) / "log.jsonl")
-    summary = json.loads((Path(args.run_dir) / "summary.json").read_text())
+    log_path = Path(args.log) if args.log else Path(args.run_dir) / "log.jsonl"
+    summary_path = Path(args.summary) if args.summary else Path(args.run_dir) / "summary.json"
+    results = json.loads(Path(args.eval).read_text())
+    log = load_jsonl(log_path)
+    summary = json.loads(summary_path.read_text())
     cal_path = Path(args.model_dir) / "calibration.json"
     calib = json.loads(cal_path.read_text()) if cal_path.exists() else {}
-    card = render(args.repo_id, results, log, summary, calib, data_stats())
-    (Path(args.model_dir) / "README.md").write_text(card)
-    print(f"wrote {Path(args.model_dir) / 'README.md'}")
+    compare = json.loads(Path(args.compare).read_text()) if args.compare else None
+    card = render(args.repo_id, results, log, summary, calib, data_stats(), compare, args.hardware)
+    out = Path(args.out) if args.out else Path(args.model_dir) / "README.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(card)
+    print(f"wrote {out}")
 
 
 if __name__ == "__main__":

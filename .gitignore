@@ -9,3 +9,4 @@ hf_job/bundle/
 hf_job/budget_ledger.json
 reports/
 *.egg-info/
+hf_model_card/
