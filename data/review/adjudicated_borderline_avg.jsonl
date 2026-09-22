@@ -1,0 +1,104 @@
+{"id": "b01-0007", "targets": {"team": {"probabilities": {"billing": 0.5, "technical": 0.45999999999999996, "account": 0.035, "sales": 0.005}}}}
+{"id": "b01-0010", "targets": {"frustration": {"probabilities": {"0": 0.5, "1": 0.45999999999999996, "2": 0.04}}}}
+{"id": "b01-0021", "targets": {"handling": {"probabilities": {"help_article": 0.57, "live_agent": 0.34500000000000003, "account_manager": 0.08499999999999999}}}}
+{"id": "b01-0022", "targets": {"frustration": {"probabilities": {"0": 0.02, "1": 0.5, "2": 0.45999999999999996, "3": 0.02}}}}
+{"id": "b01-0028", "targets": {"reply_quality": {"probabilities": {"0": 0.475, "1": 0.425, "2": 0.09, "3": 0.01}}}}
+{"id": "b01-0031", "targets": {"retention_approach": {"probabilities": {"offer_discount": 0.085, "ask_reason_first": 0.45, "process_immediately": 0.465}}}}
+{"id": "b01-0033", "targets": {"csat": {"probabilities": {"0": 0.5, "1": 0.45499999999999996, "2": 0.035, "3": 0.005, "4": 0.005}}}}
+{"id": "b01-0040", "targets": {"satisfaction": {"probabilities": {"0": 0.025, "1": 0.475, "2": 0.5}}}}
+{"id": "b01-0052", "targets": {"churn_risk": {"probabilities": {"0": 0.0, "1": 0.060000000000000005, "2": 0.435, "3": 0.46499999999999997, "4": 0.04}}}}
+{"id": "b01-0070", "targets": {"intent": {"probabilities": {"freeze_card": 0.47500000000000003, "freeze_account": 0.11, "check_balance": 0.005, "transfer": 0.005, "unclear": 0.405}}}}
+{"id": "b01-0096", "targets": {"category": {"probabilities": {"authorised_waiver": 0.015, "fee_waiver_request": 0.525, "complaint": 0.025, "fraud_attempt": 0.435}}}}
+{"id": "b01-0101", "targets": {"outcome": {"probabilities": {"no_action": 0.02, "exit_relationship": 0.02, "enhanced_due_diligence": 0.42500000000000004, "request_source_of_wealth": 0.445, "refer_fiu": 0.09}}}}
+{"id": "b01-0105", "targets": {"severity": {"probabilities": {"0": 0.0, "1": 0.02, "2": 0.49, "3": 0.49}}}}
+{"id": "b01-0120", "targets": {"outcome": {"probabilities": {"cardholder_wins": 0.115, "merchant_wins": 0.45, "arbitration": 0.060000000000000005, "request_more_evidence": 0.375}}}}
+{"id": "b01-0122", "targets": {"category": {"probabilities": {"fees_and_charges": 0.44, "misleading_advertising": 0.51, "customer_service": 0.005, "payments_delays": 0.0, "other": 0.045}}}}
+{"id": "b02-0006", "targets": {"action": {"probabilities": {"approve": 0.0, "request_edit": 0.015, "remove_listing": 0.32, "remove_and_review_account": 0.665}}, "severity": {"probabilities": {"0": 0.0, "1": 0.015, "2": 0.335, "3": 0.6499999999999999}}}}
+{"id": "b02-0023", "targets": {"honest_error": {"noul": 0.55}}}
+{"id": "b02-0067", "targets": {"habit_pre_existing": {"noul": 0.625}}}
+{"id": "b02-0074", "targets": {"next_step": {"probabilities": {"pay_as_claimed": 0.0, "pay_police_items_only": 0.065, "recorded_interview": 0.5, "siu_referral": 0.435}}}}
+{"id": "b02-0077", "targets": {"spreading": {"noul": 0.4}}}
+{"id": "b02-0107", "targets": {"honesty": {"probabilities": {"0": 0.005, "1": 0.425, "2": 0.5700000000000001}}}}
+{"id": "b03-0003", "targets": {"dedup_action": {"probabilities": {"0": 0.03, "1": 0.51, "2": 0.45999999999999996}}}}
+{"id": "b03-0026", "targets": {"would_return": {"noul": 0.425}}}
+{"id": "b03-0033", "targets": {"action": {"probabilities": {"0": 0.035, "1": 0.46499999999999997, "2": 0.5}}}}
+{"id": "b03-0055", "targets": {"cloud_level": {"probabilities": {"0": 0.0, "1": 0.005, "2": 0.035, "3": 0.525, "4": 0.435}}}}
+{"id": "b03-0061", "targets": {"overall": {"probabilities": {"0": 0.035, "1": 0.375, "2": 0.45, "3": 0.135, "4": 0.005}}}}
+{"id": "b03-0084", "targets": {"greener_than": {"probabilities": {"comparative_with_basis": 0.44, "comparative_without_basis": 0.44, "not_comparative": 0.12}}}}
+{"id": "b03-0088", "targets": {"balance": {"probabilities": {"0": 0.525, "1": 0.44, "2": 0.035}}}}
+{"id": "b03-0095", "targets": {"globex_protection": {"probabilities": {"0": 0.035, "1": 0.475, "2": 0.49}}}}
+{"id": "b03-0105", "targets": {"recipient": {"probabilities": {"employer": 0.005, "prescribed_regulator": 0.425, "media": 0.005, "not_covered": 0.055, "unclear": 0.51}}}}
+{"id": "b03-0112", "targets": {"legal_contacted": {"noul": 0.45}}}
+{"id": "b03-0114", "targets": {"urgency_3": {"probabilities": {"0": 0.05, "1": 0.45, "2": 0.5}}}}
+{"id": "b03-0116", "targets": {"recommendation": {"probabilities": {"accept": 0.425, "reject": 0.065, "negotiate_definition": 0.51}}}}
+{"id": "b03-0120", "targets": {"soft_opt_in": {"noul": 0.575}}}
+{"id": "b04-0008", "targets": {"pile_on": {"noul": 0.375}}}
+{"id": "b04-0028", "targets": {"attention": {"probabilities": {"0": 0.46499999999999997, "1": 0.515, "2": 0.02}}}}
+{"id": "b04-0030", "targets": {"action": {"probabilities": {"remove": 0.215, "warn": 0.22499999999999998, "allow": 0.285, "allow_with_debate_label": 0.275}}}}
+{"id": "b04-0039", "targets": {"targeted": {"noul": 0.45}, "action": {"probabilities": {"allow": 0.195, "warn": 0.25, "remove": 0.165, "need_more_context": 0.39}}}}
+{"id": "b04-0044", "targets": {"enforcement": {"probabilities": {"0": 0.0, "1": 0.005, "2": 0.47500000000000003, "3": 0.52}}}}
+{"id": "b04-0045", "targets": {"review_depth": {"probabilities": {"0": 0.5, "1": 0.45, "2": 0.05}}}}
+{"id": "b04-0058", "targets": {"action": {"probabilities": {"0": 0.0, "1": 0.03, "2": 0.42000000000000004, "3": 0.55}}}}
+{"id": "b04-0059", "targets": {"promotes_ideology": {"noul": 0.65}}}
+{"id": "b04-0061", "targets": {"harm": {"probabilities": {"0": 0.025, "1": 0.47500000000000003, "2": 0.5}}}}
+{"id": "b04-0067", "targets": {"screening_action": {"probabilities": {"send_as_is": 0.005, "redact_sensitive_fields": 0.51, "block_and_regenerate": 0.485}}}}
+{"id": "b04-0076", "targets": {"harmful": {"noul": 0.45}}}
+{"id": "b04-0078", "targets": {"harm_if_complied": {"probabilities": {"0": 0.47500000000000003, "1": 0.475, "2": 0.05}}}}
+{"id": "b04-0083", "targets": {"needs_disclaimer": {"noul": 0.425}}}
+{"id": "b04-0106", "targets": {"routing": {"probabilities": {"pass_with_health_framing": 0.54, "block": 0.01, "pass": 0.45}}}}
+{"id": "b04-0108", "targets": {"harm_if_complied": {"probabilities": {"0": 0.5, "1": 0.475, "2": 0.025}}}}
+{"id": "b04-0112", "targets": {"routing": {"probabilities": {"pass_with_profanity_allowed_per_policy": 0.5599999999999999, "block": 0.015, "pass": 0.42500000000000004}}}}
+{"id": "b04-0120", "targets": {"contains_possible_instruction": {"noul": 0.65}}}
+{"id": "b04-0121", "targets": {"dual_use_level": {"probabilities": {"0": 0.55, "1": 0.42500000000000004, "2": 0.025}}}}
+{"id": "b04-0124", "targets": {"auto_action_confidence": {"probabilities": {"0": 0.060000000000000005, "1": 0.41500000000000004, "2": 0.525}}}}
+{"id": "b05-0017", "targets": {"relevance": {"probabilities": {"0": 0.0, "1": 0.01, "2": 0.515, "3": 0.475}}}}
+{"id": "b05-0057", "targets": {"b_relevance": {"probabilities": {"0": 0.44999999999999996, "1": 0.54, "2": 0.01}}}}
+{"id": "b05-0071", "targets": {"citation_relevance": {"probabilities": {"0": 0.41500000000000004, "1": 0.5599999999999999, "2": 0.025, "3": 0.0}}}}
+{"id": "b05-0079", "targets": {"s3_verdict": {"probabilities": {"supports": 0.025, "partially_supports": 0.485, "contradicts": 0.45, "not_enough_info": 0.04}}}}
+{"id": "b05-0081", "targets": {"verdict": {"probabilities": {"not_enough_info": 0.4, "contradicts": 0.35, "partially_supports": 0.21, "supports": 0.04}}}}
+{"id": "b05-0083", "targets": {"editor_action": {"probabilities": {"0": 0.02, "1": 0.505, "2": 0.475}}}}
+{"id": "b05-0097", "targets": {"row3_support": {"probabilities": {"0": 0.01, "1": 0.475, "2": 0.515}}}}
+{"id": "b05-0101", "targets": {"support_level": {"probabilities": {"0": 0.01, "1": 0.54, "2": 0.435, "3": 0.015}}}}
+{"id": "b05-0104", "targets": {"editor_action": {"probabilities": {"0": 0.02, "1": 0.515, "2": 0.46499999999999997}}}}
+{"id": "b05-0106", "targets": {"verdict": {"probabilities": {"partially_supports": 0.515, "supports": 0.02, "contradicts": 0.45, "not_enough_info": 0.015}}}}
+{"id": "b05-0116", "targets": {"verdict": {"probabilities": {"supports": 0.015, "partially_supports": 0.49, "contradicts": 0.48, "not_enough_info": 0.015}}}}
+{"id": "b05-0121", "targets": {"relevance": {"probabilities": {"0": 0.0, "1": 0.03, "2": 0.5, "3": 0.45, "4": 0.02}}}}
+{"id": "b06-0002", "targets": {"urgency": {"probabilities": {"0": 0.05, "1": 0.475, "2": 0.475}}}}
+{"id": "b06-0061", "targets": {"accuracy": {"probabilities": {"0": 0.04, "1": 0.485, "2": 0.475}}}}
+{"id": "b06-0068", "targets": {"usefulness": {"probabilities": {"0": 0.45999999999999996, "1": 0.505, "2": 0.035}}}}
+{"id": "b06-0072", "targets": {"currency": {"probabilities": {"USD": 0.075, "AUD": 0.01, "CAD": 0.41500000000000004, "ask_user": 0.5}}}}
+{"id": "b06-0080", "targets": {"which_q2": {"probabilities": {"2025": 0.030000000000000002, "2026": 0.295, "not_stated": 0.675}}}}
+{"id": "b06-0085", "targets": {"wants_permanent": {"noul": 0.675}}}
+{"id": "b06-0091", "targets": {"unit": {"probabilities": {"fahrenheit": 0.075, "celsius": 0.465, "ask_user": 0.45999999999999996}}}}
+{"id": "b06-0100", "targets": {"which_flight": {"probabilities": {"XA_305": 0.125, "ambiguous": 0.47500000000000003, "XA_309": 0.4}}}}
+{"id": "b06-0112", "targets": {"compliance_gates_copy": {"noul": 0.6}}}
+{"id": "b06-0113", "targets": {"harm_if_shown": {"probabilities": {"0": 0.025, "1": 0.42500000000000004, "2": 0.55}}}}
+{"id": "b06-0119", "targets": {"fallback": {"probabilities": {"hr_pto_balance": 0.0, "hr_policy_search": 0.525, "payroll_payslip_get": 0.275, "none": 0.2}}}}
+{"id": "b07-0002", "targets": {"same_entity": {"probabilities": {"0": 0.03, "1": 0.585, "2": 0.385}}}}
+{"id": "b07-0006", "targets": {"coverage": {"probabilities": {"0": 0.02, "1": 0.48, "2": 0.5}}}}
+{"id": "b07-0030", "targets": {"same_person": {"probabilities": {"0": 0.06, "1": 0.65, "2": 0.29000000000000004}}}}
+{"id": "b07-0043", "targets": {"father_son": {"noul": 0.575}}}
+{"id": "b07-0048", "targets": {"a_b_same": {"probabilities": {"0": 0.08, "1": 0.485, "2": 0.435}}}}
+{"id": "b07-0051", "targets": {"same_supplier": {"probabilities": {"0": 0.02, "1": 0.405, "2": 0.515, "3": 0.060000000000000005}}}}
+{"id": "b07-0052", "targets": {"action": {"probabilities": {"merge": 0.025, "link_as_possible": 0.33999999999999997, "keep_separate": 0.35, "request_more_info": 0.285}}}}
+{"id": "b07-0078", "targets": {"break_after_3": {"probabilities": {"0": 0.060000000000000005, "1": 0.39, "2": 0.55}}}}
+{"id": "b07-0084", "targets": {"currency": {"probabilities": {"usd": 0.08, "cad": 0.46499999999999997, "eur": 0.0, "not_stated": 0.455}}}}
+{"id": "b07-0085", "targets": {"asks_to_add": {"noul": 0.425}}}
+{"id": "b07-0096", "targets": {"section4_full": {"noul": 0.6}}}
+{"id": "b07-0109", "targets": {"same_day": {"noul": 0.7}}}
+{"id": "b07-0115", "targets": {"orders_after_notice": {"noul": 0.4}}}
+{"id": "b07-0117", "targets": {"dawn_ref": {"probabilities": {"absolute_date": 0.015, "relative_to_today": 0.41500000000000004, "relative_to_event": 0.52, "calendar_rule": 0.02, "not_stated": 0.03}}}}
+{"id": "b07-0120", "targets": {"currency": {"probabilities": {"sek": 0.09, "nok": 0.51, "dkk": 0.09, "isk": 0.025, "eur": 0.01, "not_stated": 0.275}}}}
+{"id": "b08-0001", "targets": {"gate": {"probabilities": {"0": 0.125, "1": 0.42500000000000004, "2": 0.4, "3": 0.05}}}}
+{"id": "b08-0010", "targets": {"handling": {"probabilities": {"execute": 0.005, "ask_owner": 0.46, "reject_and_alert": 0.5349999999999999}}}}
+{"id": "b08-0020", "targets": {"cause": {"probabilities": {"misaligned_door": 0.4, "low_battery": 0.42500000000000004, "connectivity": 0.02, "unclear": 0.155}}}}
+{"id": "b08-0050", "targets": {"tension": {"probabilities": {"0": 0.005, "1": 0.5, "2": 0.48, "3": 0.015}}}}
+{"id": "b08-0052", "targets": {"handling": {"probabilities": {"execute": 0.015, "execute_with_warning": 0.14500000000000002, "decline_suggest_alternative": 0.44000000000000006, "ask_confirmation": 0.4}}}}
+{"id": "b08-0061", "targets": {"parent_notice": {"probabilities": {"0": 0.325, "1": 0.485, "2": 0.19}}}}
+{"id": "b08-0062", "targets": {"time_left": {"probabilities": {"0": 0.035, "1": 0.49, "2": 0.47500000000000003}}}}
+{"id": "b08-0066", "targets": {"damage_extent": {"probabilities": {"0": 0.005, "1": 0.525, "2": 0.44, "3": 0.030000000000000002}}}}
+{"id": "b08-0075", "targets": {"action_required": {"noul": 0.525}}}
+{"id": "b08-0093", "targets": {"caller_legit": {"noul": 0.6}}}
+{"id": "b08-0094", "targets": {"s1_value": {"probabilities": {"0": 0.5, "1": 0.495, "2": 0.005}}}}
+{"id": "b08-0095", "targets": {"forecast_confidence": {"probabilities": {"0": 0.0, "1": 0.02, "2": 0.55, "3": 0.43000000000000005}}}}
+{"id": "b08-0117", "targets": {"interest_level": {"probabilities": {"0": 0.015, "1": 0.46499999999999997, "2": 0.505, "3": 0.015}}}}

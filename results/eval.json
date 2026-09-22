@@ -1,0 +1,86 @@
+[
+  {
+    "model": "Qwen/Qwen3.5-0.8B-Base",
+    "by_type": {
+      "choice": {
+        "n": 261,
+        "acc": 0.559,
+        "logloss": 1.113,
+        "brier": 0.406,
+        "ece": 0.077,
+        "cov@0.5": 0.23,
+        "acc@0.5": 0.87,
+        "cov@0.7": 0.09,
+        "acc@0.7": 0.92,
+        "cov@0.9": 0.02,
+        "acc@0.9": 0.6
+      },
+      "noul": {
+        "n": 288,
+        "acc": 0.552,
+        "logloss": 0.723,
+        "brier": 0.362,
+        "ece": 0.165
+      },
+      "score": {
+        "n": 165,
+        "acc": 0.479,
+        "logloss": 1.188,
+        "brier": 0.399,
+        "ece": 0.117,
+        "score_mae": 0.562,
+        "cov@0.5": 0.37,
+        "acc@0.5": 0.59,
+        "cov@0.7": 0.15,
+        "acc@0.7": 0.71,
+        "cov@0.9": 0.0,
+        "acc@0.9": NaN
+      }
+    },
+    "perm_tvd": 0.201,
+    "latency_p50_ms": 53.0,
+    "latency_p95_ms": 729.0
+  },
+  {
+    "model": "mghafiri/qwen3.5-0.8B-decision-model",
+    "by_type": {
+      "choice": {
+        "n": 261,
+        "acc": 0.808,
+        "logloss": 0.702,
+        "brier": 0.191,
+        "ece": 0.034,
+        "cov@0.5": 0.75,
+        "acc@0.5": 0.87,
+        "cov@0.7": 0.55,
+        "acc@0.7": 0.93,
+        "cov@0.9": 0.04,
+        "acc@0.9": 1.0
+      },
+      "noul": {
+        "n": 288,
+        "acc": 0.812,
+        "logloss": 0.468,
+        "brier": 0.141,
+        "ece": 0.028
+      },
+      "score": {
+        "n": 165,
+        "acc": 0.8,
+        "logloss": 0.734,
+        "brier": 0.134,
+        "ece": 0.064,
+        "score_mae": 0.255,
+        "cov@0.5": 0.68,
+        "acc@0.5": 0.9,
+        "cov@0.7": 0.3,
+        "acc@0.7": 0.96,
+        "cov@0.9": 0.0,
+        "acc@0.9": NaN
+      }
+    },
+    "perm_tvd": 0.0574,
+    "latency_p50_ms": 52.0,
+    "latency_p95_ms": 87.0
+  }
+]

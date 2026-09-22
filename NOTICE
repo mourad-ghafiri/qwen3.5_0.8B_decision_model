@@ -1,0 +1,11 @@
+qwen3.5-0.8B-decision-model
+Copyright (c) 2026 Mourad Ghafiri
+
+Code and dataset: MIT License (see LICENSE).
+
+Model weights: Apache License 2.0. The fine-tuned model published on Hugging Face is derived from
+Qwen/Qwen3.5-0.8B-Base (Apache License 2.0, https://huggingface.co/Qwen/Qwen3.5-0.8B-Base),
+so the weights are distributed under the same license.
+
+This project is independent and not affiliated with or endorsed by TypeSafe AI.
+"Jev" and "System One" refer to TypeSafe's publicly documented product and interface.

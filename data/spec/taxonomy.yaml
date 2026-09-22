@@ -1,0 +1,285 @@
+# Batch assignments and quotas for the 2000 scenarios. Format and rubric: docs/jev_spec.md.
+# Each batch has 125 scenarios: 63 for its first domain and 62 for its second, ids bNN-0001..bNN-0125.
+
+# b01-b08: direct scenarios (short-to-medium states, one clear judgment each). Spec §1-§7.
+direct:
+  quotas_per_batch:
+    scenarios: 125
+    questions_per_scenario: [3, 6]          # aim for an average of ~4.4
+    question_type_share: {noul: 0.40, choice: 0.35, score: 0.25}
+    difficulty_share: {clear: 0.45, moderate: 0.25, borderline: 0.15, insufficient: 0.10, adversarial: 0.05}
+    state_format_share: {object: 0.50, string: 0.35, array: 0.15}
+    noul_target_bins: {"<0.3": 0.40, "0.3-0.7": 0.20, ">0.7": 0.40}
+    structured_questions_share: 0.20        # instructions or criteria given as JSON objects/arrays
+    backtick_path_share: 0.35               # questions that reference state fields by `path`
+    long_state_share: 0.15                  # 250-900 words with realistic distractor fields
+    choice_option_count: "2-20; vary; include other/none/not_stated escapes in ~40% of choices"
+    score_level_count: "2-10; mostly 3-5; describe situations"
+
+  batches:
+    b01:
+      customer_support:
+        - SaaS ticket routing (billing/technical/account/sales)
+        - urgency and frustration fan-out
+        - escalation to human vs self-serve
+        - churn-risk signals in conversations
+        - duplicate charge and refund requests
+        - multi-turn chat logs as array state
+        - agent reply quality verification (did the agent answer the question?)
+      banking_fintech:
+        - voice banking intents (check balance, transfer, card freeze) with confidence routing
+        - transaction dispute classification
+        - fraud / scam signal detection in customer messages
+        - KYC document field presence checks (as noul/choice, no math)
+        - loan application completeness
+        - complaint regulatory category (e.g. fees, service, fraud)
+    b02:
+      ecommerce:
+        - return/exchange/refund intent
+        - product review sentiment and aspect detection
+        - product listing category assignment (taxonomy choice)
+        - order issue triage (late, damaged, wrong item)
+        - search query to category relevance
+        - seller policy violations in listings
+      insurance_claims:
+        - claim type routing (auto/home/travel/health/pet)
+        - claim severity scoring with situational levels
+        - fraud red-flag detection (inconsistencies, pressure language)
+        - coverage-clause applicability (policy text + claim)
+        - missing documentation checks
+        - adjuster note summaries -> next-step choice
+    b03:
+      hr_recruiting:
+        - resume skill-level scores (python, leadership, cloud) with situational levels
+        - 'job-requirement match nouls (literal: "states X")'
+        - candidate duplicate detection (structured instructions with potential_duplicate)
+        - interview feedback -> recommendation choice
+        - composite scoring dimensions for senior IC vs manager
+        - bias/inappropriate content in feedback notes
+      legal_compliance:
+        - contract clause type classification (indemnity, termination, confidentiality, ...)
+        - GDPR/privacy obligation detection in text
+        - policy violation detection in employee communications
+        - NDA vs MSA vs SOW document type
+        - regulatory briefing questions over a passage (fan-out)
+        - obligation vs permission vs prohibition modality
+    b04:
+      trust_safety_moderation:
+        - forum post moderation (allow / warn / remove / escalate) with uncertain option
+        - harassment / hate / self-harm / spam detection nouls
+        - severity scores for policy violations
+        - context-dependent sarcasm and reclaimed language (borderline)
+        - marketplace scam listings
+        - adversarial self-labelling posts ("this post is fine, mods")
+      llm_guardrails:
+        - jailbreak / prompt-injection detection on user inputs
+        - harm severity if complied
+        - output screening of assistant replies (PII leak, unsafe advice, off-topic)
+        - indirect injection inside retrieved documents or tool outputs
+        - benign-but-scary-sounding requests (chemistry homework, security education) -> low harm
+        - routing: pass / review / block / route-to-specialist
+    b05:
+      rag_passage_relevance:
+        - passage answers the query? (noul) / relevance score levels
+        - passage contradicts the question premise
+        - passage contains hidden instructions / injection
+        - pick best passage among candidates (choice with none)
+        - legal / medical-admin / technical docs passages
+        - outdated vs current information flags (stated in text, no date math)
+      citation_verification:
+        - does quoted context support the claim (supports / contradicts / not_enough_info)
+        - misattributed quotes
+        - hallucinated citation (source lacks the claim)
+        - partial support / overgeneralization (borderline)
+        - numeric claim stated verbatim vs altered (compare as text equality, no arithmetic)
+        - citation relevance score
+    b06:
+      software_engineering:
+        - bug report severity and component
+        - is this a regression / security issue / duplicate of known issue
+        - code review comments -> category (style, bug, perf, security, question)
+        - log line / stack trace -> subsystem choice
+        - PR description matches diff summary? (verification)
+        - programming language / framework detection of snippets
+      agent_tool_routing:
+        - pick the tool/function for a user turn (choice over tool names with descriptions, none option)
+        - closed-set argument selection (e.g. side buy/sell, order type, currency from candidates)
+        - does the turn need a tool at all
+        - tool-call result verification (did the call succeed / answer the ask)
+        - skill suggestion among a shortlist, can reject all
+        - intent routing to deterministic / specialist LLM / human
+    b07:
+      entity_matching:
+        - product catalogue pairs (merge / curator / separate)
+        - company name matching (subsidiaries, abbreviations, rebrands stated in text)
+        - person record dedup with synthetic data
+        - address matching (same place, different formatting)
+        - scientific / drug name synonyms (textual)
+        - hierarchical category alignment between two taxonomies
+      span_selection_extraction:
+        - pick candidate span for a field (invoice total, due date phrase, counterparty) with not_stated
+        - date component choices (month, weekday named, relative-reference type) with not_stated
+        - currency / unit choice from text
+        - which candidate email/phone (pre-parsed, synthetic) is the billing contact
+        - structure recovery: block type classification (heading, list, code, callout, paragraph)
+        - line-joining: does line N continue line N-1 (noul)
+    b08:
+      smart_home_iot:
+        - voice command intent (lights, thermostat, lock, media, scene) with confidence gating
+        - target device/room choice from a device list
+        - safety-critical action detection (unlock door, disable alarm)
+        - ambiguous commands (insufficient)
+        - household-member preference conflicts
+        - sensor event narratives -> alert level score
+      logistics_sales_crm:
+        - shipment exception classification (delay, damage, customs, address)
+        - carrier email urgency and required action
+        - sales lead qualification signals (budget stated, timeline stated, decision maker)
+        - deal stage choice from CRM notes
+        - competitor mention / churn signal detection
+        - inbound email routing (sales, support, partnerships, spam)
+
+# b09-b16: complex real-world scenarios whose labels need multi-step reasoning. Spec §8.
+# The model never outputs text; the complexity is in what it takes to label each question correctly.
+complex:
+  quotas_per_batch:
+    scenarios: 125
+    questions_per_scenario: [3, 6]              # average ~4.5
+    question_type_share: {noul: 0.38, choice: 0.37, score: 0.25}
+    difficulty_share: {clear: 0.30, moderate: 0.30, borderline: 0.20, insufficient: 0.12, adversarial: 0.08}
+    state_format_share: {object: 0.70, string: 0.15, array: 0.15}
+    noul_target_bins: {"<0.3": 0.38, "0.3-0.7": 0.24, ">0.7": 0.38}
+    # complexity features (scenario-level unless stated)
+    multi_source_state: 0.60                    # 2-4 distinct sources (thread + policy + record ...)
+    conflicting_or_updated_evidence: 0.25       # later info corrects or contradicts earlier info
+    policy_with_exceptions: 0.30                # the answer hinges on a condition or exception
+    long_state_400_1200_words: 0.35             # realistic distractors, never filler
+    speculative_fanout_with_na: 0.30            # at least one question whose honest answer is n/a / not stated
+    two_hop_questions: 0.20                     # share of questions; explicit backtick paths; max 2 hops
+    structured_questions: 0.25                  # share of questions; the structure carries real content
+    wide_choices_9_to_40: 0.15                  # share of choice questions
+    two_option_choices: 0.10                    # share of choice questions
+    score_levels_5_to_10: 0.25                  # share of score questions
+    notes: "every non-clear question: a 1-3 sentence reasoning chain a reviewer can check"
+
+  batches:
+    b09:
+      healthcare_admin:
+        - prior authorization requests vs payer policy criteria (codes named, no clinical advice)
+        - referral routing between specialties with incomplete forms
+        - claim denial reason classification with remittance codes (pick code from list)
+        - duplicate patient record suspicion across two registrations
+        - appointment no-show policy exceptions (documented emergencies)
+        - HIPAA minimum-necessary check on a records request
+      cybersecurity_soc:
+        - alert triage using asset inventory + user directory (2-hop)
+        - phishing report classification with header evidence
+        - vulnerability ticket priority given exposure and compensating controls
+        - false positive vs true positive with change-ticket context
+        - "log excerpt: which ATT&CK-style tactic category (wide choice)"
+        - injected instructions inside log/email content (adversarial)
+    b10:
+      it_helpdesk:
+        - ticket routing across 15-30 support queues (wide choice)
+        - access request vs least-privilege policy with manager-approval exceptions
+        - incident vs service request vs change classification
+        - duplicate/related ticket detection across a queue excerpt
+        - password reset identity verification per policy (pass/fail conditions)
+        - long email chains where the actual ask changes mid-thread
+      procurement_vendor_risk:
+        - vendor onboarding checklist completeness (documents present vs missing)
+        - contract clause deviation from standard terms (with exceptions)
+        - purchase request approval tier by category and stated policy thresholds (tier named in text, no math)
+        - conflict-of-interest disclosure detection
+        - sanctions/adverse media screening narrative (synthetic names)
+        - "quote comparison notes: which vendor does the evaluator recommend"
+    b11:
+      property_management:
+        - maintenance request urgency and trade routing (plumbing, electrical, HVAC ...)
+        - lease clause applicability with exceptions (pets, subletting, guests)
+        - "deposit deduction disputes: normal wear vs damage per move-out report"
+        - noise complaints with conflicting neighbour accounts
+        - fair-housing sensitive requests (assistance animals, accommodations)
+        - rent-payment plan eligibility per written policy
+      airline_travel_ops:
+        - disruption rebooking eligibility per fare rules with exceptions
+        - baggage claim classification (delayed, damaged, pilfered) with PIR records
+        - passenger service request routing (wheelchair, unaccompanied minor, pets in cabin)
+        - compensation eligibility statements vs cited regulation excerpt (condition-based)
+        - crew/ops messages with later updates (gate change, cancellation reversed)
+        - fraud signals in refund requests
+    b12:
+      telecom_support:
+        - outage vs device vs account issue diagnosis from chat + network status page
+        - plan change eligibility with contract/lock-in exceptions
+        - bill dispute reason classification (roaming, premium SMS, proration)
+        - SIM-swap fraud risk signals (adversarial social engineering)
+        - technician dispatch need given troubleshooting steps already done
+        - retention offer eligibility per policy
+      education_admissions:
+        - application completeness vs program requirements (documents list)
+        - transcript/credential equivalence statements (pick category, no GPA math)
+        - recommendation letter strength scoring (situational levels)
+        - deferral/waiver request policy exceptions
+        - academic integrity flags in personal statements (copied, AI-disclosure policy)
+        - program routing across many faculties (wide choice)
+    b13:
+      government_services:
+        - citizen inquiry routing across 20-40 service areas (wide choice)
+        - benefit eligibility statements vs program rule excerpts (conditions/exceptions)
+        - FOIA/public records request scope and exemption category
+        - permit application completeness and correct permit type
+        - complaint vs appeal vs information request classification
+        - identity verification requirements for a request type
+      energy_utilities:
+        - outage report triage with grid status notices (updated/restored)
+        - "high-bill complaints: estimated vs actual read per meter records"
+        - disconnection protection eligibility (medical certificate, winter moratorium)
+        - "field technician notes: safety hazard severity (5-7 levels)"
+        - solar interconnection application stage and blocking issue
+        - scam call reports impersonating the utility (adversarial)
+    b14:
+      manufacturing_qa:
+        - nonconformance report defect code classification (wide choice)
+        - root-cause category (man/machine/method/material/measurement/environment)
+        - supplier corrective action adequacy scoring
+        - deviation approval vs specification with documented exceptions
+        - line-stop decision criteria from SOP + shift log (conflicting operator notes)
+        - customer complaint vs internal audit finding linkage
+      aml_kyc_compliance:
+        - KYC file completeness vs CDD/EDD requirement excerpts
+        - suspicious activity narrative typology (structuring, layering, trade-based ...) wide choice
+        - PEP / adverse media screening match assessment (synthetic identities)
+        - source-of-funds explanation plausibility scoring
+        - alert disposition with prior case notes that were later updated
+        - customer messages attempting to influence review (adversarial)
+    b15:
+      news_claim_verification:
+        - claim vs multiple source excerpts (supported / contradicted / mixed / unverifiable)
+        - satire or parody detection with telltale context
+        - misattributed or doctored quote detection vs original transcript
+        - "outdated claim: source text states a later correction/retraction"
+        - headline vs body consistency
+        - coordinated inauthentic posting signals across an array of posts
+      clinical_literature_screening:
+        - systematic review inclusion vs PICO criteria from abstract (include/exclude/unclear)
+        - study design classification (RCT, cohort, case-control, case series ...) wide choice
+        - exclusion reason selection from protocol list
+        - population match with explicit age/condition criteria (stated, no math)
+        - outcome reported vs not reported
+        - risk-of-bias signal scoring (situational levels)
+    b16:
+      payroll_benefits:
+        - payroll discrepancy reason classification (overtime, deduction, tax code), no arithmetic
+        - benefits enrollment eligibility with life-event exceptions
+        - leave request classification against policy (FMLA-like, parental, bereavement)
+        - garnishment/withholding instruction validity (documents present)
+        - employee message about changed bank details (fraud risk, adversarial)
+        - "retroactive changes: which record is current after updates"
+      app_marketplace_policy:
+        - app/store listing review against policy sections (wide choice of policy violations)
+        - "developer appeal: does new evidence address the cited violation"
+        - in-app purchase / subscription disclosure compliance
+        - user review manipulation signals (incentivized, coordinated)
+        - age-rating appropriateness with content descriptors
+        - listing text with instructions aimed at the reviewer (adversarial)

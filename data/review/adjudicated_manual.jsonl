@@ -1,0 +1,26 @@
+{"id": "b01-0004", "targets": {"urgency": {"probabilities": {"0": 0.5, "1": 0.45, "2": 0.05}}}}
+{"id": "b01-0027", "targets": {"promise_verified": {"noul": 0.4}}}
+{"id": "b01-0056", "targets": {"escalate_to": {"probabilities": {"security_team": 0.42, "legal": 0.35, "support_lead": 0.21, "none": 0.02}}}}
+{"id": "b01-0072", "targets": {"next_step": {"probabilities": {"accept_deposit": 0.01, "request_documents": 0.37, "internal_suspicion_review": 0.6, "close_account": 0.02}}}}
+{"id": "b01-0080", "targets": {"mismatch_reason": {"probabilities": {"typo": 0.01, "different_person": 0.12, "nickname": 0.01, "name_change": 0.36, "not_determinable": 0.5}}}}
+{"id": "b01-0095", "targets": {"dispute_reason": {"probabilities": {"duplicate_charge": 0.03, "split_shipment": 0.55, "fraud_unauthorized": 0.07, "not_determinable": 0.35}}}}
+{"id": "b01-0100", "targets": {"fraud_text_sent": {"noul": 0.4}}}
+{"id": "b01-0119", "targets": {"third_party_coaching": {"noul": 0.5}}}
+{"id": "b02-0067", "targets": {"decision": {"probabilities": {"0": 0.04, "1": 0.46, "2": 0.5}}}}
+{"id": "b02-0096", "targets": {"contact_outdated": {"noul": 0.65}}}
+{"id": "b03-0063", "targets": {"bonus": {"probabilities": {"eligible": 0.02, "not_eligible": 0.6, "needs_more_info": 0.38}}}}
+{"id": "b03-0083", "targets": {"approval_claim": {"probabilities": {"0": 0.01, "1": 0.3, "2": 0.69}}}}
+{"id": "b03-0102", "targets": {"off_hours": {"noul": 0.45}}}
+{"id": "b04-0043", "targets": {"severity": {"probabilities": {"0": 0.45, "1": 0.3, "2": 0.25}}}}
+{"id": "b04-0080", "targets": {"harm_if_complied": {"probabilities": {"0": 0.06, "1": 0.48, "2": 0.45, "3": 0.01}}}}
+{"id": "b04-0081", "targets": {"harm_if_complied": {"probabilities": {"0": 0.39, "1": 0.6, "2": 0.01}}}}
+{"id": "b04-0108", "targets": {"likely_subject": {"probabilities": {"a_dangerous_substance": 0.03, "a_craft_or_cosmetic": 0.02, "food_or_drink": 0.5, "cannot_determine": 0.45}}}}
+{"id": "b05-0011", "targets": {"parking_relevance": {"probabilities": {"0": 0.55, "1": 0.44, "2": 0.01}}}}
+{"id": "b05-0079", "targets": {"s2_verdict": {"probabilities": {"supports": 0.45, "partially_supports": 0.5, "contradicts": 0.01, "not_enough_info": 0.04}}}}
+{"id": "b05-0117", "targets": {"verdict": {"probabilities": {"supports": 0.03, "contradicts": 0.55, "not_enough_info": 0.42}}}}
+{"id": "b05-0125", "targets": {"same_encyclopedia": {"noul": 0.45}}}
+{"id": "b06-0099", "targets": {"contact_unique": {"noul": 0.55}}}
+{"id": "b06-0121", "targets": {"confirmation": {"probabilities": {"0": 0.04, "1": 0.36, "2": 0.6}}}}
+{"id": "b06-0124", "targets": {"route": {"probabilities": {"deterministic_handler": 0.65, "human_agent": 0.0, "specialist_llm": 0.0, "general_llm": 0.35}}}}
+{"id": "b07-0020", "targets": {"same_patient": {"probabilities": {"0": 0.52, "1": 0.44, "2": 0.04}}}}
+{"id": "b08-0100", "targets": {"will_switch": {"noul": 0.42}}}

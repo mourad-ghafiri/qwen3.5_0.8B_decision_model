@@ -1,0 +1,17 @@
+scenarios kept: 2000  dropped: 0  pending disagreements: 0
+overall agreement: 9434/9718 = 97.1%
+  choice  adversarial    144/145   99.3%
+  choice  borderline     342/400   85.5%
+  choice  clear         1576/1576 100.0%
+  choice  insufficient   289/295   98.0%
+  choice  moderate      1168/1173  99.6%
+  noul    adversarial    305/305  100.0%
+  noul    borderline     527/571   92.3%
+  noul    clear         1776/1776 100.0%
+  noul    insufficient   463/503   92.0%
+  noul    moderate       825/825  100.0%
+  score   adversarial    124/126   98.4%
+  score   borderline     431/546   78.9%
+  score   clear          413/413  100.0%
+  score   insufficient    61/64    95.3%
+  score   moderate       990/1000  99.0%

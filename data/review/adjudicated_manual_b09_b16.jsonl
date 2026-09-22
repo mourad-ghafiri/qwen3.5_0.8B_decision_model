@@ -1,0 +1,41 @@
+{"id": "b09-0016", "targets": {"recommended_action": {"probabilities": {"send_discharge_letter": 0.05, "refer_to_medical_director": 0.45, "send_another_warning": 0.22, "close_no_action": 0.28}}}}
+{"id": "b09-0077", "targets": {"page_live": {"noul": 0.6}}}
+{"id": "b09-0100", "targets": {"credentials_entered_by_someone": {"noul": 0.35}}}
+{"id": "b09-0106", "targets": {"wider_targeting": {"noul": 0.5}}}
+{"id": "b09-0122", "targets": {"beacon_on_0101": {"noul": 0.6}}}
+{"id": "b10-0007", "targets": {"group_change": {"noul": 0.5}}}
+{"id": "b10-0014", "targets": {"maintenance_contract": {"noul": 0.5}}}
+{"id": "b10-0020", "targets": {"leave_whole_period": {"noul": 0.5}}}
+{"id": "b10-0021", "targets": {"business_travel": {"noul": 0.55}}}
+{"id": "b10-0036", "targets": {"letter_received": {"noul": 0.35}}}
+{"id": "b10-0044", "targets": {"recycle_bin": {"noul": 0.5}}}
+{"id": "b10-0058", "targets": {"mic_other_apps": {"noul": 0.5}}}
+{"id": "b10-0065", "targets": {"vendor_accepts_supercap": {"noul": 0.5}}}
+{"id": "b10-0070", "targets": {"a6_same_entity": {"noul": 0.45}}}
+{"id": "b10-0075", "targets": {"proper_notice_possible": {"noul": 0.5}}}
+{"id": "b10-0088", "targets": {"alternative_suppliers": {"noul": 0.4}}}
+{"id": "b10-0092", "targets": {"completeness": {"probabilities": {"0": 0.45, "1": 0.3, "2": 0.23, "3": 0.02}}}}
+{"id": "b10-0108", "targets": {"arden_meets_deadline": {"noul": 0.55}}}
+{"id": "b11-0077", "targets": {"exclusion_applies": {"probabilities": {"0": 0.01, "1": 0.04, "2": 0.4, "3": 0.55}}}}
+{"id": "b12-0039", "drop": ["upfront_adequate"]}
+{"id": "b12-0049", "targets": {"booster_eligible": {"noul": 0.5}}}
+{"id": "b12-0062", "targets": {"placement_known": {"noul": 0.4}}}
+{"id": "b12-0067", "targets": {"housing_refund": {"noul": 0.35}}}
+{"id": "b14-0022", "targets": {"single_sample_enough": {"noul": 0.45}}}
+{"id": "b14-0026", "drop": ["hour2_suspect"]}
+{"id": "b14-0092", "targets": {"same_funds_returned": {"noul": 0.05}}}
+{"id": "b14-0093", "targets": {"q2_delivery": {"probabilities": {"delivered_as_planned": 0.02, "delayed_by_conflict": 0.45, "funds_diverted": 0.03, "not_established": 0.5}}}}
+{"id": "b15-0024", "targets": {"detail_level": {"probabilities": {"0": 0.0, "1": 0.04, "2": 0.42, "3": 0.52, "4": 0.02}}}}
+{"id": "b15-0028", "targets": {"confusion_risk": {"probabilities": {"0": 0.03, "1": 0.4, "2": 0.55, "3": 0.02}}}}
+{"id": "b15-0030", "targets": {"alibi_true": {"noul": 0.5}}}
+{"id": "b15-0043", "targets": {"unsampled_stretch": {"noul": 0.6}}}
+{"id": "b15-0054", "targets": {"label": {"probabilities": {"satire_tag": 0.5, "false": 0.05, "needs_source": 0.45}}}}
+{"id": "b15-0071", "targets": {"r201_population_issue": {"noul": 0.7}}}
+{"id": "b15-0086", "targets": {"reference_standard_rob": {"probabilities": {"0": 0.6, "1": 0.35, "2": 0.05}}}}
+{"id": "b15-0089", "targets": {"cost_section_narrative": {"noul": 0.65}}}
+{"id": "b15-0095", "targets": {"long_term_used": {"noul": 0.4}}}
+{"id": "b15-0105", "targets": {"rob_allocation": {"probabilities": {"0": 0.02, "1": 0.5, "2": 0.48}}}}
+{"id": "b15-0124", "targets": {"failures_balanced": {"noul": 0.5}}}
+{"id": "b16-0040", "targets": {"extension_granted": {"noul": 0.5}}}
+{"id": "b16-0091", "targets": {"precise_needed": {"noul": 0.1}}}
+{"id": "b16-0116", "targets": {"resubmission_needed": {"noul": 0.65}}}

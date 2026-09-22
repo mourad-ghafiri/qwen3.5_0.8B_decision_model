@@ -1,0 +1,106 @@
+{"id": "b09-0001", "targets": {"criteria_documentation": {"probabilities": {"0": 0.0, "1": 0.015, "2": 0.085, "3": 0.47, "4": 0.43}}}}
+{"id": "b09-0013", "targets": {"urgency": {"probabilities": {"0": 0.45, "1": 0.49, "2": 0.055, "3": 0.005}}}}
+{"id": "b09-0022", "targets": {"same_person": {"probabilities": {"0": 0.005, "1": 0.05500000000000001, "2": 0.4, "3": 0.5, "4": 0.04}}}}
+{"id": "b09-0042", "targets": {"symptom_flag": {"noul": 0.55}}}
+{"id": "b09-0045", "targets": {"expedited_qualifies": {"noul": 0.425}}}
+{"id": "b09-0056", "targets": {"urgency": {"probabilities": {"0": 0.36, "1": 0.61, "2": 0.03, "3": 0.0}}}}
+{"id": "b09-0067", "targets": {"residual_risk": {"probabilities": {"0": 0.47500000000000003, "1": 0.485, "2": 0.04, "3": 0.0, "4": 0.0}}}}
+{"id": "b09-0098", "targets": {"verification_step": {"probabilities": {"0": 0.025, "1": 0.475, "2": 0.47, "3": 0.03}}}}
+{"id": "b09-0107", "targets": {"further_infected": {"noul": 0.525}}}
+{"id": "b09-0110", "targets": {"severity": {"probabilities": {"0": 0.0, "1": 0.0, "2": 0.365, "3": 0.61, "4": 0.025}}}}
+{"id": "b09-0111", "targets": {"severity": {"probabilities": {"0": 0.01, "1": 0.425, "2": 0.5, "3": 0.065, "4": 0.0}}}}
+{"id": "b09-0115", "targets": {"older_theft_possible": {"noul": 0.575}}}
+{"id": "b10-0001", "targets": {"time_pressure": {"probabilities": {"0": 0.0, "1": 0.03, "2": 0.525, "3": 0.425, "4": 0.02}}}}
+{"id": "b10-0013", "targets": {"urgency": {"probabilities": {"0": 0.035, "1": 0.515, "2": 0.45}}}}
+{"id": "b10-0035", "targets": {"merge_decision": {"probabilities": {"merge": 0.475, "link_as_related": 0.465, "keep_separate": 0.060000000000000005}}}}
+{"id": "b10-0040", "targets": {"not_owner": {"noul": 0.575}, "attacker_likelihood": {"probabilities": {"0": 0.060000000000000005, "1": 0.4, "2": 0.47500000000000003, "3": 0.065}}}}
+{"id": "b10-0049", "targets": {"actionability": {"probabilities": {"0": 0.035, "1": 0.46499999999999997, "2": 0.475, "3": 0.025}}}}
+{"id": "b10-0056", "targets": {"primary_driver": {"probabilities": {"device_performance": 0.5, "on_call_duties": 0.5}}}}
+{"id": "b10-0091", "targets": {"source_conflict": {"probabilities": {"sales_proposal_vs_soc_report": 0.46499999999999997, "soc_report_vs_vendor_clarification": 0.485, "contract_vs_vendor_clarification": 0.02, "no_conflict": 0.030000000000000002}}}}
+{"id": "b10-0106", "targets": {"requester_category": {"probabilities": {"0": 0.035, "1": 0.45, "2": 0.475, "3": 0.04}}}}
+{"id": "b10-0124", "targets": {"one_year_available": {"noul": 0.425}}}
+{"id": "b11-0003", "targets": {"dispute_strength": {"probabilities": {"0": 0.005, "1": 0.015, "2": 0.07, "3": 0.35, "4": 0.5599999999999999}}}}
+{"id": "b11-0007", "targets": {"priority": {"probabilities": {"P1": 0.5, "P2": 0.5}}}}
+{"id": "b11-0008", "targets": {"permanent_move_signal": {"noul": 0.4}}}
+{"id": "b11-0018", "targets": {"current_priority": {"probabilities": {"0": 0.4, "1": 0.2, "2": 0.33499999999999996, "3": 0.065}}}}
+{"id": "b11-0042", "targets": {"relocation": {"probabilities": {"0": 0.035, "1": 0.46499999999999997, "2": 0.5}}}}
+{"id": "b11-0048", "targets": {"host_is_owner": {"noul": 0.375}}}
+{"id": "b11-0074", "targets": {"claim_strength": {"probabilities": {"0": 0.42500000000000004, "1": 0.47500000000000003, "2": 0.08499999999999999, "3": 0.01, "4": 0.005}}}}
+{"id": "b11-0075", "targets": {"credit_consent": {"noul": 0.575}}}
+{"id": "b11-0080", "targets": {"record_delay_explains": {"noul": 0.45}}}
+{"id": "b11-0090", "targets": {"other_12_status": {"probabilities": {"no_show": 0.425, "involuntarily_rebooked": 0.055, "not_determinable": 0.52}}}}
+{"id": "b11-0094", "targets": {"bassinet_return_eligibility": {"probabilities": {"0": 0.575, "1": 0.3, "2": 0.1, "3": 0.02, "4": 0.005}}}}
+{"id": "b11-0096", "targets": {"refund_available": {"probabilities": {"yes_full_refund": 0.02, "no_not_covered": 0.45, "only_if_cancelled": 0.53}}}}
+{"id": "b11-0102", "targets": {"primary_code": {"probabilities": {"WX-DI": 0.575, "ATC-GDP": 0.38, "MX": 0.01, "CRW": 0.0, "OPS": 0.025, "CAT": 0.0, "FUEL": 0.0, "SEC": 0.0, "PAX": 0.0, "LATE-IN": 0.01}}, "secondary_code": {"probabilities": {"ATC-GDP": 0.55, "MX": 0.03, "WX-DI": 0.31000000000000005, "none": 0.11}}}}
+{"id": "b11-0106", "targets": {"negligence_shown": {"probabilities": {"0": 0.45, "1": 0.45, "2": 0.09, "3": 0.01}}}}
+{"id": "b11-0112", "targets": {"claim_settlement_expectation": {"probabilities": {"0": 0.015, "1": 0.45, "2": 0.45, "3": 0.08, "4": 0.005}}}}
+{"id": "b11-0113", "targets": {"intent_assessment": {"probabilities": {"0": 0.02, "1": 0.25, "2": 0.375, "3": 0.325, "4": 0.03}}}}
+{"id": "b11-0120", "targets": {"miles_goodwill": {"noul": 0.575}}}
+{"id": "b11-0122", "targets": {"software_explains_pattern": {"noul": 0.45}}}
+{"id": "b12-0042", "targets": {"severity": {"probabilities": {"0": 0.0, "1": 0.42500000000000004, "2": 0.5, "3": 0.045, "4": 0.03}}}}
+{"id": "b12-0052", "targets": {"data_fit": {"probabilities": {"0": 0.02, "1": 0.575, "2": 0.405}}}}
+{"id": "b12-0054", "targets": {"quote_request_reading": {"probabilities": {"quote_requested": 0.475, "conditional_interest_only": 0.49, "no_mention": 0.035}}, "wifi_calling_suitable": {"probabilities": {"0": 0.02, "1": 0.5, "2": 0.48}}}}
+{"id": "b12-0061", "targets": {"route_marking": {"probabilities": {"0": 0.4, "1": 0.55, "2": 0.05}}}}
+{"id": "b12-0065", "targets": {"route": {"probabilities": {"veterinary_medicine": 0.42000000000000004, "animal_science": 0.05500000000000001, "biomedical_sciences": 0.04, "public_health": 0.09, "nursing": 0.005, "agriculture": 0.0, "biology": 0.01, "medicine": 0.0, "pharmacy": 0.0, "environmental_science": 0.0, "graduate_studies": 0.025, "financial_aid": 0.015, "international_office": 0.0, "mature_student_advising": 0.315, "other": 0.025}}}}
+{"id": "b12-0073", "targets": {"special_consideration_relevance": {"probabilities": {"0": 0.46, "1": 0.51, "2": 0.03}}}}
+{"id": "b12-0076", "targets": {"completeness": {"probabilities": {"0": 0.0, "1": 0.025, "2": 0.525, "3": 0.425, "4": 0.025}}}}
+{"id": "b12-0086", "targets": {"strict_reviewer_accepts": {"noul": 0.425}}}
+{"id": "b12-0087", "targets": {"panel_evidence": {"probabilities": {"0": 0.29, "1": 0.685, "2": 0.025}}}}
+{"id": "b12-0102", "targets": {"route_clarity": {"probabilities": {"0": 0.05, "1": 0.45, "2": 0.5}}}}
+{"id": "b12-0104", "targets": {"leadership_evidence": {"probabilities": {"0": 0.0, "1": 0.0, "2": 0.035, "3": 0.365, "4": 0.6}}}}
+{"id": "b12-0107", "targets": {"good_faith": {"probabilities": {"0": 0.025, "1": 0.39, "2": 0.565, "3": 0.02}}}}
+{"id": "b12-0108", "targets": {"year2_prospect": {"probabilities": {"0": 0.425, "1": 0.325, "2": 0.225, "3": 0.025, "4": 0.0}}}}
+{"id": "b12-0112", "targets": {"overall_band": {"probabilities": {"0": 0.0, "1": 0.035, "2": 0.475, "3": 0.475, "4": 0.015}}}}
+{"id": "b12-0122", "targets": {"modelling_gap_risk": {"probabilities": {"0": 0.01, "1": 0.49, "2": 0.5}}}}
+{"id": "b13-0026", "targets": {"urgency": {"probabilities": {"0": 0.03, "1": 0.45, "2": 0.485, "3": 0.035}}}}
+{"id": "b13-0033", "targets": {"case_strength": {"probabilities": {"0": 0.02, "1": 0.51, "2": 0.43, "3": 0.04}}}}
+{"id": "b13-0034", "targets": {"urgency": {"probabilities": {"0": 0.465, "1": 0.51, "2": 0.025}}}}
+{"id": "b13-0052", "targets": {"heating_urgency": {"probabilities": {"0": 0.0, "1": 0.02, "2": 0.475, "3": 0.485, "4": 0.02}}}}
+{"id": "b13-0058", "targets": {"credibility": {"probabilities": {"0": 0.0, "1": 0.02, "2": 0.45999999999999996, "3": 0.52}}}}
+{"id": "b13-0061", "targets": {"neighbor_report": {"noul": 0.45}}}
+{"id": "b13-0066", "targets": {"wr2_gap": {"probabilities": {"none_missing": 0.435, "final_notice": 0.015, "personal_contact_attempt": 0.525, "both": 0.025}}}}
+{"id": "b13-0073", "targets": {"severity": {"probabilities": {"0": 0.0, "1": 0.465, "2": 0.515, "3": 0.02}}}}
+{"id": "b13-0092", "targets": {"size_change_restudy": {"noul": 0.635}}}
+{"id": "b13-0102", "targets": {"disability_established": {"noul": 0.425}}}
+{"id": "b13-0105", "targets": {"deduction_support": {"probabilities": {"0": 0.01, "1": 0.465, "2": 0.525}}}}
+{"id": "b13-0106", "targets": {"identity_match": {"probabilities": {"0": 0.01, "1": 0.49, "2": 0.485, "3": 0.015}}}}
+{"id": "b13-0115", "targets": {"moratorium": {"probabilities": {"0": 0.575, "1": 0.365, "2": 0.060000000000000005}}}}
+{"id": "b13-0124", "targets": {"still_considering": {"noul": 0.65}}}
+{"id": "b14-0013", "targets": {"disposition": {"probabilities": {"accept": 0.01, "hold_pending_docs": 0.55, "reject_return": 0.405, "use_as_is_deviation": 0.035}}}}
+{"id": "b14-0025", "targets": {"wrong_model_for_site": {"noul": 0.4}}}
+{"id": "b14-0033", "targets": {"exception_applies": {"noul": 0.3}}}
+{"id": "b14-0047", "targets": {"product_exposure": {"probabilities": {"0": 0.005, "1": 0.45, "2": 0.5249999999999999, "3": 0.02}}}}
+{"id": "b14-0050", "targets": {"release_recorded": {"probabilities": {"signed_quality_release": 0.015, "verbal_ok_only": 0.47, "no_release": 0.515}}}}
+{"id": "b14-0056", "targets": {"most_direct_finding": {"probabilities": {"IA-26-21": 0.49, "IA-26-22": 0.015, "IA-26-23": 0.0, "IA-26-24": 0.025, "IA-26-25": 0.0, "IA-26-26": 0.385, "IA-26-27": 0.06, "IA-26-28": 0.005, "IA-26-29": 0.0, "none": 0.02}}}}
+{"id": "b14-0075", "targets": {"review_outcome": {"probabilities": {"0": 0.0, "1": 0.015, "2": 0.435, "3": 0.525, "4": 0.025}}}}
+{"id": "b14-0081", "targets": {"camper_sale_supports_part": {"noul": 0.65}}}
+{"id": "b14-0086", "targets": {"takings_plausible": {"noul": 0.55}}}
+{"id": "b14-0087", "targets": {"customer_role": {"probabilities": {"0": 0.125, "1": 0.45, "2": 0.425}}}}
+{"id": "b14-0108", "targets": {"explanation_support": {"probabilities": {"0": 0.33999999999999997, "1": 0.625, "2": 0.035, "3": 0.0}}}}
+{"id": "b14-0117", "targets": {"accountant_role": {"probabilities": {"0": 0.02, "1": 0.33999999999999997, "2": 0.64}}}}
+{"id": "b14-0125", "targets": {"crime_link": {"probabilities": {"link_found": 0.015, "no_link_found": 0.425, "not_assessed": 0.56}}}}
+{"id": "b15-0002", "targets": {"policy_action": {"probabilities": {"satire_tag": 0.45499999999999996, "false_with_context": 0.5, "no_action": 0.045000000000000005}}, "harm": {"probabilities": {"0": 0.425, "1": 0.505, "2": 0.05, "3": 0.02}}}}
+{"id": "b15-0037", "targets": {"rating": {"probabilities": {"true": 0.005, "mostly_true": 0.01, "half_true": 0.47, "mostly_false": 0.45999999999999996, "false": 0.055}}}}
+{"id": "b15-0049", "targets": {"harm": {"probabilities": {"0": 0.02, "1": 0.47500000000000003, "2": 0.47500000000000003, "3": 0.03}}}}
+{"id": "b15-0053", "targets": {"verdict": {"probabilities": {"supported": 0.005, "contradicted": 0.515, "mixed": 0.465, "unverifiable": 0.015}}}}
+{"id": "b15-0068", "targets": {"full_text_decision": {"probabilities": {"include": 0.45, "exclude_no_outcome_data": 0.09, "await_companion_publication": 0.45999999999999996}}}}
+{"id": "b15-0069", "targets": {"conflict_severity": {"probabilities": {"0": 0.0, "1": 0.005, "2": 0.57, "3": 0.42500000000000004}}}}
+{"id": "b15-0072", "targets": {"decision": {"probabilities": {"include": 0.02, "exclude": 0.575, "awaiting_classification": 0.405}}}}
+{"id": "b15-0075", "targets": {"reviewer_disagreement_likely": {"probabilities": {"0": 0.45, "1": 0.51, "2": 0.04}}}}
+{"id": "b15-0079", "targets": {"overall_rob": {"probabilities": {"0": 0.07500000000000001, "1": 0.42500000000000004, "2": 0.45, "3": 0.05, "4": 0.0}}}}
+{"id": "b15-0085", "targets": {"theme_depth": {"probabilities": {"0": 0.005, "1": 0.47500000000000003, "2": 0.49, "3": 0.030000000000000002}}}}
+{"id": "b15-0087", "targets": {"screener_b_argument": {"probabilities": {"0": 0.49, "1": 0.47500000000000003, "2": 0.035, "3": 0.0}}}}
+{"id": "b15-0101", "targets": {"selective_reporting_rob": {"probabilities": {"0": 0.41500000000000004, "1": 0.55, "2": 0.035}}}}
+{"id": "b16-0010", "targets": {"disqualifying": {"noul": 0.35}}}
+{"id": "b16-0012", "targets": {"governing_clause": {"probabilities": {"BRV-2": 0.4, "BRV-1_via_BRV-3": 0.265, "not_covered": 0.01, "unclear": 0.325}}}}
+{"id": "b16-0021", "targets": {"fraud_risk": {"probabilities": {"0": 0.32, "1": 0.64, "2": 0.03, "3": 0.01, "4": 0.0}}}}
+{"id": "b16-0033", "targets": {"right_attachment": {"noul": 0.35}}}
+{"id": "b16-0062", "targets": {"governing_clauses": {"probabilities": {"L-1": 0.005, "L-2": 0.07500000000000001, "L-3": 0.46, "L-4": 0.46}}, "explanation_confidence": {"probabilities": {"0": 0.05, "1": 0.5, "2": 0.45}}}}
+{"id": "b16-0068", "targets": {"slots_frequency": {"probabilities": {"infrequent": 0.42500000000000004, "frequent": 0.175, "not_determinable": 0.4}}}}
+{"id": "b16-0076", "targets": {"developer_excuse": {"probabilities": {"0": 0.49, "1": 0.485, "2": 0.02, "3": 0.005}}}}
+{"id": "b16-0083", "targets": {"severity": {"probabilities": {"0": 0.0, "1": 0.03, "2": 0.39, "3": 0.58}}}}
+{"id": "b16-0088", "targets": {"appeal_strength": {"probabilities": {"0": 0.45499999999999996, "1": 0.515, "2": 0.025, "3": 0.005}}}}
+{"id": "b16-0089", "targets": {"developer_argument": {"probabilities": {"0": 0.465, "1": 0.515, "2": 0.015, "3": 0.005}}}}
+{"id": "b16-0101", "targets": {"compliance_framing": {"probabilities": {"0": 0.49, "1": 0.485, "2": 0.02, "3": 0.005}}}}
+{"id": "b16-0108", "targets": {"developer_reasoning": {"probabilities": {"0": 0.575, "1": 0.39, "2": 0.03, "3": 0.005}}}}
+{"id": "b16-0123", "targets": {"governing_clause": {"probabilities": {"R-1": 0.045, "R-2": 0.53, "R-3": 0.425}}}}

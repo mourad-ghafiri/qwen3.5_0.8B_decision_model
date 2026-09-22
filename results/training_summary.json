@@ -1,0 +1,9 @@
+{
+  "best_epoch": 9,
+  "best_val_ce": 0.6516,
+  "epochs_completed": 10,
+  "epochs_requested": 10,
+  "steps": 2720,
+  "stop_reason": "completed all epochs",
+  "elapsed_s": 2881
+}
